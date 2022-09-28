@@ -1,0 +1,88 @@
+
+public class ArrayMaxTest {
+
+	public static void main(String[] args) {
+	
+
+		ArrayMax array = new ArrayMax();	// 1.ArrayMax 객체를 생성한다.
+		
+
+	
+		
+		int random;             	// 2.생성된 객체의 배열에 1~100사이의 값을 랜덤하게 넣는다!
+		for(int i = 0; i<array.arr.length; i++) {
+			random = (int)((Math.random()*100)+1);
+			array.arr[i] = random;        
+			
+			
+		}
+		for(int i = 0; i<array.arr.length; i++) {
+		System.out.println(array.arr[i]);}
+		
+		
+	
+		change(array.arr);  	// 4.반환된 최대값을 출력한다.
+		
+		System.out.println("최대값은 : " + array.arr[0]);
+		
+	
+	}
+	
+	    static int[] change(int[]arr) {   //3. 메소드를 정의한다.(배열의 최대값을 구해서 반환하도록 한다)
+	    	
+	       
+	    	for(int i =0; i<arr.length; i++) {
+	    		if(arr[0] <arr[i]) {
+	    			arr[0] = arr[i];	    			
+	    		}
+	    	}	    	
+	    	int[] maxArr;
+	    	maxArr = arr;
+		
+	return maxArr;}
+        
+	    
+      
+      
+      //선생님
+      
+public class PracticeTest {
+
+	public static void main(String[] args) {
+
+	// 1.ArrayMax 객체를 생성한다.
+	
+	 Practice a = new Practice();
+	
+   // 2.생성된 객체의 배열에 1~100사이의 값을 랜덤하게 넣는다!
+	 
+	 for(int i=0; i<a.arr.length;i ++) {
+	     a.arr[i] = (int)((Math.random()*100)+1);
+		 
+	 }
+	 
+	 for(int i : a.arr) {
+		 System.out.println(i);
+	 }
+	
+	// 4.반환된 최대값을 출력한다.
+	 
+	 int max = arrayMax(a.arr);
+	 
+	 System.out.println("최대값: " + max);
+	 
+	}
+	// 3. 메소드를 정의한다.(배열의 최대값을 구해서 반환하도록 한다)
+	
+	static int arrayMax(int[]arr) { //멤버변수를 만들어서 main 블록안에 참조변수로 불러와서 이함수를 실행할것임
+		
+		int max = arr[0];
+		for(int i =0; i<arr.length; i++) {
+			if(max< arr[i]) {
+				max=arr[i];
+			}
+		}
+			return max;
+		}
+}
+
